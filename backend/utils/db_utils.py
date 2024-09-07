@@ -25,7 +25,7 @@ class db_utils:
 
         if collection.count_documents({}) == 0:
             self.insert_data()
-            self.db.food_truck_data.insert_many(self.data)
+            collection.insert_many(self.data)
             print('Data inserted successfully')
         else:
             print('Data already exists in the database')
