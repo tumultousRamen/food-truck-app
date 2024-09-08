@@ -4,6 +4,7 @@ import SearchForm from './components/SearchForm';
 import Map from './components/Map';
 import { getFoodTrucks } from './services/api';
 import './styles/App.css';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   const [foodTrucks, setFoodTrucks] = useState([]);
