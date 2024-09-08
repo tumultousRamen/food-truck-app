@@ -19,10 +19,11 @@ def get_food_trucks():
     db_client = DBUtils()
     db_client.populate_db()
     
-    # Default values : Long and lat for Palo Alto
-    user_lat = float(request.args.get('lat', 37.4419)) 
-    user_lon = float(request.args.get('lon', -122.1430))
+    user_lat = float(request.args.get('lat', 37.76)) 
+    user_lon = float(request.args.get('lon', -122.41))
     radius = float(request.args.get('radius', 5)) 
+    
+    print(f"Received request with lat: {user_lat}, lon: {user_lon}, radius: {radius}")
     
     food_trucks = db_client.db.foodtrucks.find({})
     
@@ -37,8 +38,9 @@ def get_food_trucks():
             truck['_id'] = str(truck['_id'])
             nearby_trucks.append(truck)
     
-    # Sort by distance and limit to at least 5 trucks
     nearby_trucks.sort(key=lambda x: x['distance'])
     result = nearby_trucks[:max(5, len(nearby_trucks))]
+    
+    print(f"Returning {len(result)} food trucks: {result}") 
     
     return jsonify(result)

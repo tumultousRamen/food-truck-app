@@ -26,6 +26,8 @@ class DBUtils:
         if collection.count_documents({}) == 0:
             self.insert_data()
             collection.insert_many(self.data)
-            print('Data inserted successfully')
+            print(f'Data inserted successfully. Total documents: {collection.count_documents({})}')
         else:
-            print('Data already exists in the database')
+            print(f'Data already exists in the database. Total documents: {collection.count_documents({})}')
+        
+        print(f"Sample document: {collection.find_one()}")

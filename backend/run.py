@@ -15,6 +15,6 @@ if __name__ == '__main__':
     db_client = DBUtils()
     db_client.populate_db()
 
-    app.run(host=host, port=port)
+    app.run(host=host, port=port, debug=True)
 
 
