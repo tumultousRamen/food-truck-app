@@ -16,7 +16,7 @@ https://docs.docker.com/compose/install/
 
 ```bash
 git clone https://github.com/tumultousRamen/food-truck-app
-cd food-truck-web
+cd food-truck-app
 ```
 
 2. **Use Docker Compose to build and start Backend, Frontend and DB containers**
