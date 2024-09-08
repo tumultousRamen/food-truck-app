@@ -15,7 +15,7 @@ https://docs.docker.com/compose/install/
 1. **Clone The Repo**
 
 ```bash
-git clone [https://github.com/tumultousRamen/food-truck-web](https://github.com/tumultousRamen/food-truck-app.git)
+git clone https://github.com/tumultousRamen/food-truck-app
 cd food-truck-web
 ```
 
