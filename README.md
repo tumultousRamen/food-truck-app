@@ -34,7 +34,7 @@ This command will build and start the frontend, backend, and DB containers.
 
 Users can either use their current location to fetch nearby food trucks in ascending order of their vicinity to the user, or manually enter their desired location's longitude and latitude. 
 
-![List of Food Trucks](./food_truck_list.png)
+![List of Food Trucks](./images/food_truck_list.png)
 
 ## Stopping all Containers 
 
