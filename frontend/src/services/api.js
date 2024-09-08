@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';  // Update this to match your backend URL
+const API_URL = 'http://localhost:5000';
 
 export const getFoodTrucks = async (lat, lon, radius) => {
   try {

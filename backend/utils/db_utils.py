@@ -2,11 +2,11 @@ import csv
 from pymongo import MongoClient
 from config import config
 
-class db_utils:
+class DBUtils:
     def __init__(self):
         self.client = MongoClient(config.MONGO_URI)
         self.db = self.client.foodtrucks
-        self.data_path = '../../data/food_truck_data.csv'
+        self.data_path = '/app/data/food-truck-data.csv' 
         self.data = []
 
     def insert_data(self):

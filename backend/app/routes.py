@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from utils import db_utils
+from utils.db_utils import DBUtils
 from math import sin, cos, sqrt, atan2, radians
 
 food_truck_blueprint = Blueprint('food_truck', __name__)
@@ -16,7 +16,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
 @food_truck_blueprint.route('/foodtrucks', methods=['GET'])
 def get_food_trucks():
-    db_client = db_utils()
+    db_client = DBUtils()
     db_client.populate_db()
     
     # Default values : Long and lat for Palo Alto
